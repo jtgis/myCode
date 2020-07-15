@@ -1,2 +1,2 @@
-# gisTools
-Useful GIS tools made by me for you.
+# myCode
+Useful tools, mostly GIS related, made by me for you.
