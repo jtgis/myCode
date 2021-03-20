@@ -2,7 +2,8 @@
 #
 # Version: 1.0
 #
-# Request a feature class from a arcgis rest api map service
+# Request a feature class from a arcgis rest api map service. Takes a URL and
+# output feature class as input
 #
 # Author: https://github.com/jtgis
 #
@@ -16,9 +17,9 @@ import requests
 import tempfile
 import shutil
 
-url = "http://geonb.snb.ca/arcgis/rest/services/GeoNB_SNB_LidarIndex/MapServer/1/query"
+url = "www.somemapserviceurl.com/1/query"
 
-def downloadRestFeatures(url,outName):
+def downloadRestFeatures(url,outFC):
     """
     https://gis.stackexchange.com/questions/324513/converting-rest-service-to-file-geodatabase-feature-class
     Mostly from the link above but condensed into an easy function that takes a
@@ -44,7 +45,7 @@ def downloadRestFeatures(url,outName):
     shutil.rmtree(dirpath)
     return outFC
 
-tempFc = downloadRestFeatures(url,"test")
+tempFc = downloadRestFeatures(url,"in_memory/test")
 
 print [f.name for f in arcpy.ListFields(tempFc)]
     
