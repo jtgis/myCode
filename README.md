@@ -5,7 +5,7 @@ Useful tools, mostly GIS related.
 
 ---
 
-### arcmapBasicErase.py
+### [arcmapBasicErase.py](arcmapBasicErase.py)
 Adds the erase geoprocessing tool to the ArcMap Basic license level. Works by UNIONing two input feature classes, selecting features that do not overlap with the erase features, and clipping the result. If either input is not a polygon, it will be buffered to a polygon before processing. Tested with ArcMap Desktop Basic 10.5.1 and Python 2.7.
 
 **Requirements:**
@@ -26,7 +26,7 @@ Adds the erase geoprocessing tool to the ArcMap Basic license level. Works by UN
 
 ---
 
-### arcmapPileVolumes.py
+### [arcmapPileVolumes.py](arcmapPileVolumes.py)
 Calculates volumes between two surfaces (DEM and DSM) within polygon boundaries. For each input polygon, extracts the raster surfaces, runs a Cut/Fill analysis, and writes the gross and net volume (in cubic meters) back to the output shapefile.
 
 **Requirements:**
@@ -45,7 +45,7 @@ Calculates volumes between two surfaces (DEM and DSM) within polygon boundaries.
 
 ---
 
-### arcmapRasterClipper.py
+### [arcmapRasterClipper.py](arcmapRasterClipper.py)
 Clips a single raster, a list of rasters, or an entire directory of rasters to the extent of an input feature class. Outputs are saved with a `clipped_` prefix in the specified output folder. Useful for batch processing raster datasets with a specific area of interest.
 
 **Requirements:**
@@ -67,7 +67,7 @@ Clips a single raster, a list of rasters, or an entire directory of rasters to t
 
 ---
 
-### arcmapVersionedEditing.py
+### [arcmapVersionedEditing.py](arcmapVersionedEditing.py)
 Creates a temporary SDE connection file and a named version for versioned editing of enterprise geodatabase feature classes using ArcPy. Handles version creation, editing, reconciliation, posting, and cleanup.
 
 **Requirements:**
@@ -96,7 +96,7 @@ Creates a temporary SDE connection file and a named version for versioned editin
 
 ---
 
-### arcpyDownloadMapService.py
+### [arcpyDownloadMapService.py](arcpyDownloadMapService.py)
 Downloads feature class data from an ArcGIS REST API map service by paginating through all object IDs. Supports optional spatial filtering using a query layer. The data is saved as a feature class in a file geodatabase or in-memory workspace.
 
 **Requirements:**
@@ -119,7 +119,7 @@ Downloads feature class data from an ArcGIS REST API map service by paginating t
 
 ---
 
-### tpkxToPortal.py
+### [tpkxToPortal.py](tpkxToPortal.py)
 Creates tile packages (TPKX) from raster data clipped by individual polygon features and optionally uploads them to ArcGIS Portal. Loops through each polygon, generates a TPKX tile package, and publishes it to the active Portal.
 
 **Requirements:**
@@ -145,7 +145,7 @@ Creates tile packages (TPKX) from raster data clipped by individual polygon feat
 
 ---
 
-### ArcGISOnlineEnterpriseItemSizeUsage.py
+### [ArcGISOnlineEnterpriseItemSizeUsage.py](ArcGISOnlineEnterpriseItemSizeUsage.py)
 Exports a CSV file containing information about all items in an ArcGIS Online organization or Portal, including item name, type, ID, size in bytes, and view count. Useful for auditing organizational content and storage usage.
 
 **Requirements:**
@@ -169,7 +169,7 @@ Exports a CSV file containing information about all items in an ArcGIS Online or
 
 ---
 
-### SNBPropertyDataDownloader.py
+### [SNBPropertyDataDownloader.py](SNBPropertyDataDownloader.py)
 Downloads property assessment data from the Service New Brunswick (SNB) GeoNB REST service. Features a PyQt6 GUI where you can enter a custom query expression, select an output folder, and monitor download progress. Results are exported as KMZ and Excel files.
 
 **Requirements:**
@@ -190,7 +190,7 @@ Downloads property assessment data from the Service New Brunswick (SNB) GeoNB RE
 
 ---
 
-### cameraMetadataChecker.py
+### [cameraMetadataChecker.py](cameraMetadataChecker.py)
 Scans a folder of JPEG images for GPS coordinates (latitude, longitude, altitude), camera orientation (roll/pitch/yaw), and sensor specifications (make, model, focal length) by parsing EXIF metadata. Outputs a CSV report summarizing what metadata each image contains. Useful for drone imagery and aerial photography quality checks.
 
 **Requirements:**
@@ -207,7 +207,7 @@ Scans a folder of JPEG images for GPS coordinates (latitude, longitude, altitude
 
 ---
 
-### checkForRetiredItems.py
+### [checkForRetiredItems.py](checkForRetiredItems.py)
 Scans an ArcGIS Portal or ArcGIS Online organization for retired JavaScript 3.x item types including Web AppBuilder applications, Web AppBuilder extensions, AppBuilder Widget Packages, and Map Viewer Classic web maps. Exports findings to a CSV file for migration planning.
 
 **Requirements:**
@@ -231,7 +231,7 @@ Scans an ArcGIS Portal or ArcGIS Online organization for retired JavaScript 3.x 
 
 ---
 
-### copy_storymap.py
+### [copy_storymap.py](copy_storymap.py)
 Interactive command-line tool that copies a Story Map from one ArcGIS Portal or ArcGIS Online organization to another. Creates all new item IDs and updates internal references. Uses the built-in `clone_items` function for proper handling of complex Story Map dependencies.
 
 **Requirements:**
@@ -252,7 +252,7 @@ Interactive command-line tool that copies a Story Map from one ArcGIS Portal or 
 
 ---
 
-### sendEmail.py
+### [sendEmail.py](sendEmail.py)
 Simple email sending function using Python's `smtplib`. Provides a reusable `sendEmail()` function for sending plain-text emails via SMTP.
 
 **Requirements:**
@@ -276,7 +276,7 @@ Simple email sending function using Python's `smtplib`. Provides a reusable `sen
 
 ---
 
-### siteScanAPIExample.py
+### [siteScanAPIExample.py](siteScanAPIExample.py)
 Demonstrates a full Site Scan API workflow: creating a project and mission, uploading drone images, starting processing, polling for completion, downloading output products (Ortho, DTM, DSM), and uploading results to ArcGIS Portal using `copy_raster`.
 
 **Requirements:**
