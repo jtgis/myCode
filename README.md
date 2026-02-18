@@ -38,6 +38,8 @@ Adds the erase geoprocessing tool to the ArcMap Basic license level. Works by UN
    erase("path/to/input_fc", "path/to/erase_fc", "path/to/output_fc")
    ```
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/arcmapBasicErase.py)**
+
 ---
 
 ### [arcmapPileVolumes.py](https://github.com/jtgis/myCode/blob/master/arcmapPileVolumes.py)
@@ -56,6 +58,8 @@ Calculates volumes between two surfaces (DEM and DSM) within polygon boundaries.
    - **Parameter 2:** Input DSM (top surface raster)
    - **Parameter 3:** Output Folder (where the result shapefile is saved)
 3. Run the tool. The output shapefile will include `GROSS_M3` and `NET_M3` fields.
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/arcmapPileVolumes.py)**
 
 ---
 
@@ -78,6 +82,8 @@ Clips a single raster, a list of rasters, or an entire directory of rasters to t
    from arcmapRasterClipper import rasterClipper
    rasterClipper("path/to/rasters", "path/to/extent_fc", "path/to/output")
    ```
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/arcmapRasterClipper.py)**
 
 ---
 
@@ -108,6 +114,8 @@ Creates a temporary SDE connection file and a named version for versioned editin
    ```
 4. Update the SDE connection string on line 54 (`sde:oracle11g:somesde.world`) to match your database.
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/arcmapVersionedEditing.py)**
+
 ---
 
 ### [arcpyDownloadMapService.py](https://github.com/jtgis/myCode/blob/master/arcpyDownloadMapService.py)
@@ -130,6 +138,8 @@ Downloads feature class data from an ArcGIS REST API map service by paginating t
    ```
    - `queryLayer`: Optional feature class to spatially filter results (pass `""` for none).
    - `query`: Optional SQL WHERE clause (pass `""` for all features).
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/arcpyDownloadMapService.py)**
 
 ---
 
@@ -157,6 +167,8 @@ Creates tile packages (TPKX) from raster data clipped by individual polygon feat
 2. Sign into your Portal within ArcGIS Pro (the script connects using `GIS("home")`).
 3. Run: `python tpkxToPortal.py`
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/tpkxToPortal.py)**
+
 ---
 
 ### [ArcGISOnlineEnterpriseItemSizeUsage.py](https://github.com/jtgis/myCode/blob/master/ArcGISOnlineEnterpriseItemSizeUsage.py)
@@ -181,6 +193,8 @@ Exports a CSV file containing information about all items in an ArcGIS Online or
    ```
 4. Run: `python ArcGISOnlineEnterpriseItemSizeUsage.py`
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/ArcGISOnlineEnterpriseItemSizeUsage.py)**
+
 ---
 
 ### [SNBPropertyDataDownloader.py](https://github.com/jtgis/myCode/blob/master/SNBPropertyDataDownloader.py)
@@ -202,6 +216,8 @@ Downloads property assessment data from the Service New Brunswick (SNB) GeoNB RE
    - Click **Download Data** to start the download.
 4. Output files (`SNBPropertyData.kmz` and `SNBPropertyData.xlsx`) are saved to the selected folder.
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/SNBPropertyDataDownloader.py)**
+
 ---
 
 ### [cameraMetadataChecker.py](https://github.com/jtgis/myCode/blob/master/cameraMetadataChecker.py)
@@ -218,6 +234,8 @@ Scans a folder of JPEG images for GPS coordinates (latitude, longitude, altitude
    ```
 2. Run: `python cameraMetadataChecker.py`
 3. The script outputs `image_metadata_check.csv` in the image folder with columns: `image_name`, `image_path`, `has_gps_xyz`, `has_camera_orientation`, `has_sensor_info`.
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/cameraMetadataChecker.py)**
 
 ---
 
@@ -243,6 +261,8 @@ Scans an ArcGIS Portal or ArcGIS Online organization for retired JavaScript 3.x 
    ```
 4. Run: `python checkForRetiredItems.py`
 
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/checkForRetiredItems.py)**
+
 ---
 
 ### [copy_storymap.py](https://github.com/jtgis/myCode/blob/master/copy_storymap.py)
@@ -263,6 +283,8 @@ Interactive command-line tool that copies a Story Map from one ArcGIS Portal or 
    - Connect to the **destination** portal.
    - Select a Story Map by item ID or search by title.
    - Confirm the copy and optionally share publicly.
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/copy_storymap.py)**
 
 ---
 
@@ -287,6 +309,8 @@ Simple email sending function using Python's `smtplib`. Provides a reusable `sen
    from sendEmail import sendEmail
    sendEmail("recipient@example.com", "Subject Line", "Email body text")
    ```
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/sendEmail.py)**
 
 ---
 
@@ -316,3 +340,5 @@ Demonstrates a full Site Scan API workflow: creating a project and mission, uplo
    ```
 4. Sign into your Portal within ArcGIS Pro (for uploading results).
 5. Run: `python siteScanAPIExample.py`
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/siteScanAPIExample.py)**
