@@ -1,4 +1,4 @@
-# myCode
+# code
 Useful tools, mostly GIS related.
 
 ## Scripts
