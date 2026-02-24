@@ -1,4 +1,4 @@
-# [jtgis code](https://code.jtgis.ca/)
+# [code](https://code.jtgis.ca/)
 Useful tools, mostly GIS related.
 
 ## Scripts
