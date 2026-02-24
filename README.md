@@ -1,5 +1,5 @@
 # [code](https://code.jtgis.ca/)
-Useful tools, mostly GIS related.
+jtgis code. useful tools. mostly GIS related.
 
 ## Scripts
 
