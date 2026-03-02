@@ -16,6 +16,7 @@ jtgis code. useful tools. mostly GIS related.
 - [copy_storymap.py](#copy_storymappy)
 - [sendEmail.py](#sendemailpy)
 - [siteScanAPIExample.py](#sitescanapiexamplepy)
+- [download_youtube_channel.py](#download_youtube_channelpy)
 
 ---
 
@@ -342,3 +343,37 @@ Demonstrates a full Site Scan API workflow: creating a project and mission, uplo
 5. Run: `python siteScanAPIExample.py`
 
 🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/siteScanAPIExample.py)**
+
+---
+
+### [download_youtube_channel.py](https://github.com/jtgis/code/blob/master/download_youtube_channel.py)
+Downloads all videos from a YouTube channel to a local folder as MP4 files. Skips already-downloaded videos using a local archive file, retries on errors, and displays live download progress.
+
+**Requirements:**
+- Python 3.6+
+- `yt-dlp`
+- [FFmpeg](https://ffmpeg.org/download.html) installed and accessible (default path in the script is `C:\Program Files\ShareX` — update `ffmpeg_location` on line 27 if FFmpeg is installed elsewhere)
+
+**Setup & Usage:**
+1. Install the dependency:
+   ```
+   pip install yt-dlp
+   ```
+2. If needed, update the `ffmpeg_location` on line 27 to point to the folder containing your `ffmpeg` executable:
+   ```python
+   "ffmpeg_location": r"C:\path\to\ffmpeg",
+   ```
+3. Run the script from the command line:
+   ```
+   python download_youtube_channel.py <channel_url> <output_folder>
+   ```
+   - `<channel_url>`: URL of the YouTube channel (e.g. `https://www.youtube.com/@ChannelName`)
+   - `<output_folder>`: Local folder where videos will be saved
+
+   **Example:**
+   ```
+   python download_youtube_channel.py https://www.youtube.com/@ChannelName C:\Videos\MyChannel
+   ```
+4. Videos are saved as `<VideoTitle>.mp4` in the output folder. A hidden `.downloaded_archive.txt` file tracks completed downloads so re-running the script skips already-downloaded videos.
+
+🔗 **[View the source code on GitHub](https://github.com/jtgis/code/blob/master/download_youtube_channel.py)**
